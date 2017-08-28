@@ -4,7 +4,8 @@
   "description": "Get types definitions from files with ease",
   "main": "src/index.js",
   "scripts": {
-    "test": ""
+    "test": "",
+    "release": "npm version patch && git push && npm publish"
   },
   "repository": {
     "type": "git",
