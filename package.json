@@ -1,0 +1,22 @@
+{
+  "name": "types-loader",
+  "version": "0.0.1",
+  "description": "Get types definitions from files with ease",
+  "main": "src/index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzarcon/types-loader.git"
+  },
+  "author": "zzarcon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zzarcon/types-loader/issues"
+  },
+  "homepage": "https://github.com/zzarcon/types-loader#readme",
+  "dependencies": {
+    "typescript": "^2.4.2"
+  }
+}
