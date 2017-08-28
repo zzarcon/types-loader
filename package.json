@@ -1,6 +1,6 @@
 {
   "name": "types-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Get types definitions from files with ease",
   "main": "src/index.js",
   "scripts": {
