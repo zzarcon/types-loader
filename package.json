@@ -2,10 +2,11 @@
   "name": "types-loader",
   "version": "0.0.3",
   "description": "Get types definitions from files with ease",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "",
-    "release": "npm version patch && git push && npm publish"
+    "build": "babel src/ -d dist/",
+    "release": "npm version patch && yarn build && git add . && git commit --amend --reuse-message=HEAD && git push --tags && git push && npm publish"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,11 @@
   "homepage": "https://github.com/zzarcon/types-loader#readme",
   "dependencies": {
     "typescript": "^2.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.53.1"
   }
 }

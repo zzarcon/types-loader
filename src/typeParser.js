@@ -1,5 +1,7 @@
-const readFileSync = require('fs').readFileSync;
-const ts = require('typescript');
+// @flow
+
+import {readFileSync} from 'fs';
+import * as ts from "typescript";
 
 const walkNode = (node, definitions) => {
   switch (node.kind) {
@@ -20,11 +22,11 @@ const walkSource = (sourceFile) => {
   return walkNode(sourceFile, []);
 };
 
-const getDefinitionsFromFile = (fileName) => {
+const getDefinitionsFromFile = (fileName: string) => {
   return getDefinitionsFromSource(fileName, readFileSync(fileName).toString());
 };
 
-const getDefinitionsFromSource = (fileName, source) => {
+const getDefinitionsFromSource = (fileName: string, source) => {
   const sourceFile = ts.createSourceFile(fileName, source, ts.ScriptTarget.ES6, true);
   const definitions = walkSource(sourceFile);
 
